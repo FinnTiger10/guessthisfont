@@ -3,18 +3,52 @@
 <head>
     <title>Guess this Font</title>
     <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 </head>
 
 <body>
-    <h1 id="sampletext"></h1>
-    <button id="startgamebutton" onclick="startgame()">Start Game</button>
-    <div>
-        <button class="optionbutton"></button>
-        <button class="optionbutton"></button>
-        <button class="optionbutton"></button>
-        <button class="optionbutton"></button>
+    <center>
+        <div id="titlescreen">
+            <img src="title.png" alt="title image" style="margin: 5%;">
+            <br>
+            <button class="w3-btn w3-round-xxlarge w3-purple" id="startgamebutton" onclick="startgame()" style="margin: 5%;">Start Game</button>
+        </div>
+
+        <div id="gamewindow">
+            <h1 id="sampletext"></h1>
+            <div>
+                <button class="optionbutton"></button>
+                <button class="optionbutton"></button>
+                <button class="optionbutton"></button>
+                <button class="optionbutton"></button>
+            </div>
+        </div>
+    </center>
+
+    <div id="modals" style="display: none;">
+            <div id="correctmodaldiv" class="modal">
+                <center>
+                    <p>
+                        Correct!
+                    </p>
+                    
+                    <button onclick="reset()">Play Again!</button>
+                </center>
+            </div>
+
+        <div id="incorrectmodaldiv" class="modal">
+            <center>
+                <p id="incorrectmodaltext">
+                    Incorrect! The correct answer is: [CORRECT ANSWER]
+                </p>
+                    <button onclick="reset()">Play Again!</button>
+            </center>
+        </div>
     </div>
 </body>
 </html>

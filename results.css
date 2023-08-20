@@ -1,0 +1,21 @@
+@font-face {
+    font-family: montsbold;
+    src: url(systemfonts/Montserrat-Bold.ttf);
+}
+
+h1 {
+    font-family: montsbold;
+}
+
+#scoretext {
+    font-size: 500%;
+}
+
+@font-face {
+    font-family: monts;
+    src: url(systemfonts/Montserrat-Medium.ttf);
+}
+
+#restartgamebutton {
+    font-family: monts;
+}

@@ -1,4 +1,17 @@
 #sampletext {
     font-family: randomfontname;
-    color: white;
+    display: none;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+    font-family: monts;
+    src: url(systemfonts/Montserrat-Medium.ttf);
+}
+
+#startgamebutton {
+    font-family: monts;
 }
